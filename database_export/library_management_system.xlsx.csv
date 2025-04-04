@@ -1,0 +1,41 @@
+Table,id,name,description,year,email,phone,address,isbn,title,publication_year,price,stock,book_id,author_id,publisher_id,category_id
+authors,1,J.K. Rowling,"British author best known for the Harry Potter series",1965,jkrowling@example.com,+44-1234-567890,"London, UK",,,,,,,,,
+authors,2,George Orwell,"English novelist and essayist",1903,georgeorwell@example.com,+44-2345-678901,"London, UK",,,,,,,,,
+authors,3,Agatha Christie,"British crime novelist",1890,agathachristie@example.com,+44-3456-789012,"Torquay, UK",,,,,,,,,
+authors,4,Stephen King,"American author of horror and supernatural fiction",1947,stephenking@example.com,+1-234-567-8901,"Bangor, Maine, USA",,,,,,,,,
+authors,5,Jane Austen,"English novelist known for her six major novels",1775,janeausten@example.com,+44-4567-890123,"Hampshire, England",,,,,,,,,
+publishers,1,Bloomsbury Publishing,"Major publishing house",1986,info@bloomsbury.com,+44-1234-567890,"London, UK",,,,,,,,,
+publishers,2,Penguin Books,"Leading book publisher",1935,contact@penguin.com,+44-2345-678901,"London, UK",,,,,,,,,
+publishers,3,Hachette Book Group,"One of the Big Five book publishers",1837,info@hachette.com,+1-234-567-8901,"New York, USA",,,,,,,,,
+publishers,4,Simon & Schuster,"American publishing company",1924,contact@simonschuster.com,+1-345-678-9012,"New York, USA",,,,,,,,,
+publishers,5,HarperCollins,"Worldwide book publisher",1817,info@harpercollins.com,+1-456-789-0123,"New York, USA",,,,,,,,,
+categories,1,Fiction,"Imaginative works of prose",,,,,,,,,,,,,
+categories,2,Non-Fiction,"Factual and informative works",,,,,,,,,,,,,
+categories,3,Sci-Fi,"Science fiction and futuristic works",,,,,,,,,,,,,
+categories,4,Mystery,"Detective and suspense works",,,,,,,,,,,,,
+categories,5,Fantasy,"Works involving magic and supernatural elements",,,,,,,,,,,,,
+categories,6,Horror,"Works intended to frighten and unsettle",,,,,,,,,,,,,
+categories,7,Romance,"Works focusing on romantic relationships",,,,,,,,,,,,,
+categories,8,Biography,"Works about real people's lives",,,,,,,,,,,,,
+books,1,,,,,,,9780747532743,"Harry Potter and the Philosopher's Stone",1997,19.99,15,,,1,1,
+books,2,,,,,,,9780141187761,"1984",1949,14.99,25,,,2,2,
+books,3,,,,,,,9780062073488,"Murder on the Orient Express",1934,12.99,8,,,3,2,
+books,4,,,,,,,9781501142970,"It",1986,22.99,12,,,4,3,
+books,5,,,,,,,9780141439518,"Pride and Prejudice",1813,10.99,20,,,5,2,
+books,6,,,,,,,9780747538486,"Harry Potter and the Chamber of Secrets",1998,19.99,13,,,1,1,
+books,7,,,,,,,9780451524935,"Animal Farm",1945,11.99,18,,,2,2,
+books,8,,,,,,,9780062073563,"Death on the Nile",1937,12.99,7,,,3,2,
+books,9,,,,,,,9781501180989,"The Shining",1977,20.99,10,,,4,3,
+books,10,,,,,,,9780141439662,"Emma",1815,10.99,15,,,5,2,
+book_categories,,,,,,,,,,,,,1,,,5
+book_categories,,,,,,,,,,,,,2,,,2
+book_categories,,,,,,,,,,,,,3,,,4
+book_categories,,,,,,,,,,,,,4,,,6
+book_categories,,,,,,,,,,,,,5,,,1
+book_categories,,,,,,,,,,,,,5,,,7
+book_categories,,,,,,,,,,,,,6,,,5
+book_categories,,,,,,,,,,,,,7,,,2
+book_categories,,,,,,,,,,,,,8,,,4
+book_categories,,,,,,,,,,,,,9,,,6
+book_categories,,,,,,,,,,,,,10,,,1
+book_categories,,,,,,,,,,,,,10,,,7

@@ -26,19 +26,53 @@ The application uses the following database tables:
 4. **Categories**: Book categories and descriptions
 5. **BookCategories**: Junction table for many-to-many relationship between books and categories
 
-## Installation
+## Installation and Execution Steps
 
-1. Clone this repository
-2. Set up a PostgreSQL database
-3. Configure environment variables for database connection:
-   - PGHOST
-   - PGPORT
-   - PGDATABASE
-   - PGUSER
-   - PGPASSWORD
-4. Import the SQL scripts from the `sql` folder to create and populate the database tables
-5. Start a PHP server: `php -S localhost:5000`
-6. Access the application in your browser at `http://localhost:5000`
+### Prerequisites
+- PHP 7.4 or higher
+- PostgreSQL 12 or higher
+- Web browser (Chrome, Firefox, Safari, etc.)
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/musadiqqureshi/LMS-Library-Management-System.git
+cd LMS-Library-Management-System
+```
+
+### Step 2: Set Up PostgreSQL Database
+1. Install PostgreSQL if not already installed
+2. Start PostgreSQL service
+3. Create a new database: `sudo -u postgres createdb library_db`
+
+### Step 3: Configure Environment Variables
+Set environment variables for database connection:
+```
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=library_db
+PGUSER=postgres
+PGPASSWORD=your_password
+```
+Alternative: Modify `config/db.php` with your database credentials
+
+### Step 4: Import Database Schema and Data
+1. Run the create tables script:
+   ```bash
+   psql -U postgres -d library_db -f sql/create_tables.sql
+   ```
+2. Import sample data:
+   ```bash
+   psql -U postgres -d library_db -f sql/insert_data.sql
+   ```
+3. Alternatively, use the provided Excel data file in the `database_export` folder
+
+### Step 5: Start PHP Server
+```bash
+php -S 0.0.0.0:5000
+```
+
+### Step 6: Access the Application
+Open your web browser and navigate to: `http://localhost:5000`
 
 ## File Structure
 
@@ -47,6 +81,8 @@ The application uses the following database tables:
 │   └── db.php              # Database connection configuration
 ├── css
 │   └── style.css           # Styling for the application
+├── database_export
+│   └── library_management_system.xlsx.csv  # Excel-compatible data export
 ├── js
 │   └── validation.js       # Client-side form validation
 ├── sql
@@ -63,9 +99,13 @@ The application uses the following database tables:
 3. Click the "Search" button to see matching results
 4. Results will display detailed information about each book, including its author, publisher, and categories
 
-## Screenshots
+## Excel Data File
 
-(Screenshots will be added in the future)
+The repository includes an Excel-compatible CSV file (`database_export/library_management_system.xlsx.csv`) that contains all the data from the database tables in a structured format. This file can be:
+
+1. Opened with Microsoft Excel, Google Sheets, or any spreadsheet application
+2. Used to review the sample data structure
+3. Imported into a database using database import tools
 
 ## License
 
